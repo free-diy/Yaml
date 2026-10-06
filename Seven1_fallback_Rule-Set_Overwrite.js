@@ -2,7 +2,7 @@
 // 版本： V2026.10.4
 // 频道： https://t.me/Seven1gogogo
 // 地址： https://github.com/Seven1echo/Yaml
-// 说明： 此脚本对标 Seven1_fallback_Rule-Set.yaml 转换，添加 default-nameserver 为 nameserver 加密 DNS 提供解析外, 未添加更多其余附加功能。
+// 说明： 本脚本对标 Seven1_fallback_Rule-Set.yaml 进行转换，并额外添加 default-nameserver，用于为 nameserver 加密 DNS 提供解析。
 
 
 
@@ -32,13 +32,6 @@ function main(config) {
   const Anchor_US = "(?i)^(?=.*(美国|(?<![a-zA-Z])(us|usa|lax|sfo|jfk|sjc)(?![a-zA-Z])|america|united states|🇺🇸)).*$";
   const Anchor_EU = "(?i)^(?=.*(奥地利|奥地利共和国|比利时|保加利亚|克罗地亚|塞浦路斯|捷克|丹麦|爱沙尼亚|芬兰|法国|德国|希腊|匈牙利|爱尔兰|意大利|拉脱维亚|立陶宛|卢森堡|荷兰|波兰|葡萄牙|罗马尼亚|斯洛伐克|斯洛文尼亚|西班牙|瑞典|英国|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU)).*$";
   const Anchor_OT = "^(?!.*(DIRECT|香港|台湾|日本|新加坡|韩国|美国|奥地利|奥地利共和国|比利时|保加利亚|克罗地亚|塞浦路斯|捷克|丹麦|爱沙尼亚|芬兰|法国|德国|希腊|匈牙利|爱尔兰|意大利|拉脱维亚|立陶宛|卢森堡|荷兰|波兰|葡萄牙|罗马尼亚|斯洛伐克|斯洛文尼亚|西班牙|瑞典|英国|🇭🇰|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW)).*$";
-
-
-
-// ███████████████████████████ 节点订阅 ███████████████████████████
-  config["proxy-providers"] = {
-    "机场名": {...Anchor_PR, url: "订阅链接", override: {"additional-prefix": "[机场名] "}}
-  };
 
 
 
